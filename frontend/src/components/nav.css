@@ -1,0 +1,78 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed; /* Keeps navbar fixed on scroll */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: black; /*Change color as needed*/
+    color: white;
+}
+
+/* body {
+    padding-top: 60px;  
+} */
+
+/* Default Menu */
+.menu {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    /* font-size: 1.2rem; */
+}
+
+.icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 769px) {
+    .menu {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .icon {
+        display: block; /* Show hamburger icon */
+    }
+    .nav{
+        background-color: #333;
+    }
+}
