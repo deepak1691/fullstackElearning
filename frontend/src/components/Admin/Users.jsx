@@ -12,7 +12,7 @@ export default function ContactAdmin() {
    const navigate=useNavigate();
 
   const contactApi=async()=>{
-    const response=await fetch("http://localhost:8080/api/admin/users",{
+    const response=await fetch("https://e-learning-backend-vkss.onrender.com/api/admin/users",{
       method:"GET",
       headers:{
         "Authorization":BearerToken,

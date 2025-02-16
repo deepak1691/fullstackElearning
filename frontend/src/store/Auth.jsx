@@ -24,7 +24,7 @@ export const Authprovider=({children})=>{
         if(!token) return;
         try {
             setIsLoading(true);
-            const response=await fetch("http://localhost:8080/api/user",
+            const response=await fetch("https://e-learning-backend-vkss.onrender.com/api/user",
                 {
                     method:"GET",
                     headers:{

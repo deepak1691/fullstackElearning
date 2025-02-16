@@ -16,7 +16,7 @@ export default function EdithAdmin() {
     // console.log(id);
     
     const contactApi=async()=>{
-        const response=await fetch(`http://localhost:8080/api/admin/edit/${id}`,{
+        const response=await fetch(`https://e-learning-backend-vkss.onrender.com/api/admin/edit/${id}`,{
           method:"GET",
           headers:{
             "Authorization":BearerToken,
@@ -46,7 +46,7 @@ export default function EdithAdmin() {
 
       const handlSubmit=async(e)=>{
         e.preventDefault();
-        const response=await fetch(`http://localhost:8080/api/admin/edit/${id}`,{
+        const response=await fetch(`https://e-learning-backend-vkss.onrender.com/admin/edit/${id}`,{
           method:"PUT",
           headers:{
             "Authorization":BearerToken,

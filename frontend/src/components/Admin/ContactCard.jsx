@@ -12,7 +12,7 @@ export default function ContactCard({indx,data,contactApi}) {
           
             // console.log(params.id);
         
-            const response= await fetch(`http://localhost:8080/api/admin/contact/${id}`,{
+            const response= await fetch(`https://e-learning-backend-vkss.onrender.com/api/admin/contact/${id}`,{
                 method:"DELETE",
                 headers:{
                     "Authorization":BearerToken,

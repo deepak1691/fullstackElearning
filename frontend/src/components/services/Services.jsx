@@ -8,7 +8,7 @@ const[service,setService]=useState([]);
 const[loading,setLoading]=useState(true);
   const serviceData=async()=>{
     try {
-      const data=await fetch("http://localhost:8080/api/services",{
+      const data=await fetch("https://e-learning-backend-vkss.onrender.com/api/services",{
           method:"GET",
           headers:{
             "Content-Type":"application/json"

@@ -16,7 +16,7 @@ export default function Signup () {
       try {
         const res=new FormData(formRef.current);
         const data=Object.fromEntries(res);
-        const response=await fetch("http://localhost:8080/api/signup",{
+        const response=await fetch("https://e-learning-backend-vkss.onrender.com/api/signup",{
           method:"POST",
           headers:{
             "Content-Type":"application/json"

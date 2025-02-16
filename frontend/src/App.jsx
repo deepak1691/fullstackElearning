@@ -6,7 +6,6 @@ import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import AppLayout from './components/AppLayout';
 import Contact from './components/contact/Contact';
-// import {registrationData} from './components/signup/Signup';
 import Error from './components/Error';
 import Logout from './components/Logout';
 import AdminLayout from './components/Admin/AdminLayout';

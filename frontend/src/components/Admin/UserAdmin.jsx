@@ -15,7 +15,7 @@ export default function UserAdmin({indx,data,contactApi}) {
           
             // console.log(params.id);
         
-            const response= await fetch(`http://localhost:8080/api/admin/users/${id}`,{
+            const response= await fetch(`https://e-learning-backend-vkss.onrender.com/api/admin/users/${id}`,{
                 method:"DELETE",
                 headers:{
                     "Authorization":BearerToken,

@@ -35,7 +35,7 @@ export default function Contact() {
       e.preventDefault();
       console.log(contact);
 
-      const response=await fetch("http://localhost:8080/api/contact",{
+      const response=await fetch("https://e-learning-backend-vkss.onrender.com/api/contact",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
