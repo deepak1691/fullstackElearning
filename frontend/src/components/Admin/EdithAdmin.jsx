@@ -46,7 +46,7 @@ export default function EdithAdmin() {
 
       const handlSubmit=async(e)=>{
         e.preventDefault();
-        const response=await fetch(`https://e-learning-backend-vkss.onrender.com/admin/edit/${id}`,{
+        const response=await fetch(`https://e-learning-backend-vkss.onrender.com/api/admin/edit/${id}`,{
           method:"PUT",
           headers:{
             "Authorization":BearerToken,

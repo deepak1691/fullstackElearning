@@ -27,7 +27,8 @@
     display: flex;
 }
 
-ul {
+.navul {
+   
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -58,13 +59,15 @@ a {
         padding: 1rem;
         text-align: center;
         transition: all 0.3s ease-in-out;
+        z-index: 2;
     }
 
     .menu.open {
         display: flex;
     }
 
-    ul {
+    .navul {
+        
         flex-direction: column;
         gap: 1.5rem;
     }

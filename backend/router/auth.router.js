@@ -11,5 +11,6 @@ router.route("/login").post(validate(loginSchema),controllers.login);
 router.route("/contact").post(validate(contactSchema),controllers.contact);
 router.route("/user").get(authMiddleware,controllers.user);
 router.route("/services").get(controllers.services);
+router.route("/study/:name").get(controllers.studyData);
 
 module.exports=router;

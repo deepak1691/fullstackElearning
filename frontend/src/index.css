@@ -61,6 +61,23 @@ input{
   }
   
 
+
+   .scrollable-list {
+    position: fixed;
+    top: 1;
+    left: 0;
+    z-index: 1;
+    background-color:#242424;
+    display: flex;          
+    overflow-x: auto;        
+     }
+
+  .scrollable-list li {
+    flex: 0 0 auto;         /* Prevents items from shrinking */
+    list-style: none;       /* Removes bullet points */
+    min-width: 150px;       /* Adjusts item width */
+  }
+
 @media(min-width:768px){
    .cardDetails{
     background-color: white;
@@ -71,6 +88,9 @@ input{
   .error-img{
     width: 40%;
   }
+
+
+  
 }
 
 @media(max-width:767px){
@@ -82,4 +102,9 @@ input{
     .hero{
         margin-top: 7rem;
       }
+
+      
  }
+
+
+

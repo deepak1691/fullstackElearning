@@ -12,7 +12,9 @@ import AdminLayout from './components/Admin/AdminLayout';
 import ContactAdmin from './components/Admin/ContactAdmin';
 import Users from './components/Admin/Users';
 import EdithAdmin from './components/Admin/EdithAdmin';
-import { getId } from './components/api/Apidata';
+import { getId,studyName } from './components/api/Apidata';
+import StudyCard from './components/services/StudyCard';
+import ServiceCard from './components/services/ServiceCard';
 
 function App() {
 
@@ -31,7 +33,18 @@ const router=createBrowserRouter([
       },
       {
         path:"services",
-        element:<Services/>
+        element:<Services/>,
+        children:[
+          {
+            path:"card",
+            element:<ServiceCard/>
+          },
+          {
+            path:"study/:name",
+            element:<StudyCard/>,
+            loader:studyName,
+        }
+      ]
       },
       {
         path:"contact",

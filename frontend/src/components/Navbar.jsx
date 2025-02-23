@@ -22,11 +22,11 @@ export default function Navbar() {
         
         {/* Navigation Links - Show/Hide based on isOpen state */}
         <div className={`menu ${isOpen ? 'open' : ''}`}>
-          <ul>
+          <ul className='navul'>
             <li><NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink></li>
             <li><NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink></li>
-            <li><NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink></li>
+            <li><NavLink to="/services/card" onClick={() => setIsOpen(false)}>Services</NavLink></li>
      
             {
               isLoggedIn?(

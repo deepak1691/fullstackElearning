@@ -1,6 +1,7 @@
 const {User_}=require("../models/userSchema.js");
 const{Contact}=require("../models/contactSchema.js");
 const{Service}=require("../models/servicesSchema.js");
+const { Studydata } = require("../models/stydySchema.js");
 
 
 module.exports.home=async(req,res)=>{
@@ -106,6 +107,17 @@ module.exports.services=async(req,res)=>{
         
     } catch (error) {
         console.log(error);
+        
+    }
+}
+
+module.exports.studyData=async(req,res)=>{
+    try {
+        let{name}=req.params;
+        const data=await Studydata.findOne({name:name});
+        res.status(200).json({data});
+    } catch (error) {
+        res.status(500).json({message:"internal server error"});
         
     }
 }

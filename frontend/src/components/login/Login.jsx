@@ -37,8 +37,9 @@ export default function Login() {
        email:"",
        password:""
       });
-      toast.success(result.msg);
+      
       navigate("/");
+      toast.success(result.msg);
     }else{
       toast.error(result.message);
     }
@@ -61,7 +62,9 @@ export default function Login() {
           <input type="password" name='password'  value={login.password} className="form-control" id="password"placeholder="enter your password" onChange={handleChange} required/>
 
           <button className='btn btn-primary mt-4 fs-4 px-4'>Login</button>
+        
        </form>
+       
         </div>
       </div>
     </div>
