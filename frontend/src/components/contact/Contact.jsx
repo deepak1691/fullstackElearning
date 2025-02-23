@@ -60,14 +60,14 @@ export default function Contact() {
       
   }
 
-  if(!isLoggedIn){
-    return<>
-    <Navigate to="/login"/>
-    {
-      toast.error("You are not loggedIn!!")
-    }
-    </>
-  }
+  // if(!isLoggedIn){
+  //   return<>
+  //   <Navigate to="/login"/>
+  //   {
+  //     toast.error("You are not loggedIn!!")
+  //   }
+  //   </>
+  // }
   return (
     <>
     <div className="container hero pt-5">
