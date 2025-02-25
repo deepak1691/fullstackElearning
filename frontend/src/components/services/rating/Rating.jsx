@@ -8,7 +8,7 @@ import {useAuth} from '../../../store/Auth';
 
 export default function RatingCard() {
   const {user,isLoggedIn}=useAuth();
-  const[userData,setUserData]=useState(true);
+
  
   // console.log(isLoggedIn);
 
@@ -20,20 +20,11 @@ export default function RatingCard() {
 
       //rating handle
      const handleChange=(e)=>{
-   if(user){
-    //  console.log(user);
-   
       let{name,value}=e.target;
-    
-      setRating({
+         setRating({
         ...rating,[name]:value,
-        username:user.username
-      });
-    
-   }
-      // setUserData(false);
-     
-      console.log(rating); 
+        username:user?user.username:"anonymous" 
+        });
     }
     //handle rating form submit
     
