@@ -1,6 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const controllers=require("../controllers/auth.controllers");
+const Ratingcontrollers=require("../controllers/rating.controllers");
 const {signUpSchema,loginSchema,contactSchema}=require("../validators/auth.validators");
 const {validate}=require("../meddileware/validate");
 const {authMiddleware}=require("../meddileware/auth-middleware")
@@ -12,5 +13,11 @@ router.route("/contact").post(validate(contactSchema),controllers.contact);
 router.route("/user").get(authMiddleware,controllers.user);
 router.route("/services").get(controllers.services);
 router.route("/study/:name").get(controllers.studyData);
+
+//rating 
+
+router.route("/rating").post(Ratingcontrollers.rating);
+
+router.route("/ratingdetails").get(Ratingcontrollers.ratingData);
 
 module.exports=router;

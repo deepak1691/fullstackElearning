@@ -73,7 +73,7 @@ module.exports.editUserFind=async(req,res)=>{
 
     //edit user
 
-    module.exports.editUser=async(req,res)=>{
+ module.exports.editUser=async(req,res)=>{
    try {
     
     let{id}=req.params;

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
+import RatingCard from "./rating/Rating"
+
 
 export default function ServiceCard(){
 
-  const[service,setService]=useState([]);
+ const[service,setService]=useState([]);
 const[loading,setLoading]=useState(true);
+
+
 
   const serviceData=async()=>{
     try {
@@ -28,6 +32,10 @@ const[loading,setLoading]=useState(true);
     serviceData();
   
   },[]);
+
+
+
+
 
   if (loading) {
     return (
@@ -55,7 +63,17 @@ const[loading,setLoading]=useState(true);
       </div>
     ))}
 </div>
- 
+ <div className="row">
+ <div className="col-md-6 d-flex d-md-block justify-content-center mt-5 pt-5">
+          <img src="/images/network.png" alt="login_image" className='img-fluid' style={{maxWidth:"68%"}}/>
+        </div>
+  <div className="col-md-4 mt-5 pt-5 offset-md-1">
+ <h1 className='mt-3 mb-5'>Feedback</h1>
+ <RatingCard/>
+
+  </div>
+
+ </div>
 </div>
 </>
  )

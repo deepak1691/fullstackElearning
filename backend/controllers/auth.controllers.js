@@ -32,7 +32,7 @@ module.exports.register=async(req,res)=>{
     
        res.status(200).json({
         message:"resgistration successfully",
-        token:newUser.generateToken(),
+        token:await newUser.generateToken(),
         userId:newUser._id.toString()
     })
        await newUser.save();
@@ -56,7 +56,7 @@ module.exports.login=async(req,res)=>{
       if(user){
         res.status(200).json({
             msg:"Login successfully",
-            token:userExists.generateToken(),
+            token:await userExists.generateToken(),
             userId:userExists._id.toString()
         })
       }else{

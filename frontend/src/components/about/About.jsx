@@ -3,8 +3,8 @@ import {useAuth} from '../../store/Auth';
 
 export default function About() {
     const{user}=useAuth();
-    console.log(user);
-    console.log("admin",user.isAdmin);
+    // console.log(user);
+    // console.log("admin",user.isAdmin);
     
     
     // console.log(user.username);

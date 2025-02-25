@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './Hero';
 import HomeSevices from './HomeSevices';
 import GetStarted from './GetStarted';
+import RatingSlider from '../services/rating/RatingSlider';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
     <Hero/>
     <HomeSevices/>
     <GetStarted/>
+    <RatingSlider/>
     </>
   )
 }

@@ -33,7 +33,7 @@ export default function Contact() {
 
   const handleSubmit=async(e)=>{
       e.preventDefault();
-      console.log(contact);
+      // console.log(contact);
 
       const response=await fetch("https://e-learning-backend-vkss.onrender.com/api/contact",{
         method:"POST",

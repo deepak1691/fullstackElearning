@@ -24,7 +24,7 @@ export default function Signup () {
           body:JSON.stringify(data)
         });
         const result=await response.json();
-        console.log(result);
+        // console.log(result);
        if(response.ok){
         setTokenInLs(result.token);
         formRef.current.reset();
